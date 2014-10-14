@@ -1,0 +1,21 @@
+(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])T([0-5][0-9]|60):([0-5][0-9]|60):([0-5][0-9]|60)Z
+
+est compatible avec le string:
+
+ 2014-09-01T07:59:36Z 
+ 
+ The year:(19|20)\d\d
+			
+			(19|20)-years that start only with 19 or 20
+			 \d\d   - any digit (0-9)
+			 
+The divider:[- /.]	- or .
+
+The month: (0[1-9]|1[012]) 0 and any digit between 1-9 or 1 and one of the digits 0,1,20
+
+The day: (0[1-9]|[12][0-9]|3[01])
+			0[1-9] - 0 and a digit between 1-9 
+			or
+			[12][0-9] -  1 or 2 and a digit between 1-9 
+			or
+			3 and 0 or 1
